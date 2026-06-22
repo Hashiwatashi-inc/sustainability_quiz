@@ -767,3 +767,185 @@ details[open] .faq-q::after { content: '▲'; }
   .gx-ad-cta { width: 100%; text-align: center; }
   .job-ads-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== Articles ページ ===== */
+.articles-page { padding-bottom: 40px; }
+.articles-header {
+  background: linear-gradient(135deg, var(--green) 0%, #1B5E20 100%);
+  padding: 24px 20px 20px;
+  text-align: center;
+}
+.articles-title { color: #fff; font-size: 24px; font-weight: bold; margin-bottom: 4px; }
+.articles-subtitle { color: rgba(255,255,255,0.85); font-size: 13px; }
+
+.articles-cat-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 12px 16px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  scrollbar-width: none;
+}
+.articles-cat-scroll::-webkit-scrollbar { display: none; }
+.articles-cat-chip {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.articles-cat-chip.active,
+.articles-cat-chip:hover {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.articles-list { padding: 12px 16px; display: flex; flex-direction: column; gap: 12px; }
+
+.article-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.article-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.article-card-top { display: flex; align-items: center; gap: 8px; }
+.article-cat-badge {
+  background: var(--green-pale);
+  color: var(--green);
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.article-date { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+.article-card-title { font-size: 15px; font-weight: bold; line-height: 1.5; color: var(--text); }
+.article-card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.article-card-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+.article-reading { font-size: 12px; color: var(--text-muted); }
+.article-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+.article-tag { font-size: 11px; color: var(--text-muted); }
+
+/* ===== 記事詳細 ===== */
+.article-detail { min-height: 100vh; }
+.article-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 56px;
+  z-index: 10;
+}
+.article-back-btn {
+  background: none;
+  border: none;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.article-swipe-hint { font-size: 11px; color: var(--text-muted); }
+.article-detail-body { padding: 20px 16px 48px; max-width: 760px; margin: 0 auto; }
+.article-detail-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.article-detail-title { font-size: 22px; font-weight: bold; line-height: 1.4; margin-bottom: 12px; color: var(--text); }
+.article-detail-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
+
+/* 記事コンテンツ */
+.article-content { display: flex; flex-direction: column; gap: 0; }
+.article-paragraph { font-size: 15px; line-height: 1.85; color: var(--text); margin-bottom: 16px; }
+.article-h2 {
+  font-size: 19px;
+  font-weight: bold;
+  color: var(--green);
+  margin: 28px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--green-pale);
+}
+.article-h3 { font-size: 16px; font-weight: bold; color: var(--text); margin: 20px 0 8px; }
+.article-list { padding-left: 20px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px; }
+.article-list li { font-size: 14px; line-height: 1.7; }
+.article-blockquote {
+  border-left: 4px solid var(--green);
+  background: var(--green-pale);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+.article-blockquote p { font-size: 14px; line-height: 1.8; font-style: italic; margin-bottom: 8px; }
+.article-blockquote footer { font-size: 12px; color: var(--text-muted); }
+.article-blockquote footer a { color: var(--green); }
+.article-highlight {
+  background: linear-gradient(135deg, var(--green-pale), #E8F5E9);
+  border: 1px solid var(--green-light);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+.article-highlight p { font-size: 14px; font-weight: 600; color: var(--green); line-height: 1.7; }
+
+/* テーブル */
+.article-table-wrap { overflow-x: auto; margin: 16px 0; border-radius: var(--radius-md); border: 1px solid var(--border); }
+.article-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.article-table th {
+  background: var(--green);
+  color: #fff;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.article-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); line-height: 1.6; }
+.article-table tr:last-child td { border-bottom: none; }
+.article-table tr:nth-child(even) td { background: var(--green-bg); }
+
+/* 参考資料 */
+.article-references {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid var(--border);
+}
+.references-title { font-size: 15px; font-weight: bold; margin-bottom: 12px; color: var(--text); }
+.references-list { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.reference-item { font-size: 13px; line-height: 1.6; }
+.reference-link { color: var(--green); text-decoration: underline; word-break: break-all; }
+.reference-publisher { color: var(--text-muted); }
+
+.article-back-btn-bottom {
+  display: block;
+  margin: 32px auto 0;
+  background: none;
+  border: 1.5px solid var(--green);
+  border-radius: var(--radius-md);
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.article-back-btn-bottom:hover { background: var(--green-pale); }
+
+@media (max-width: 640px) {
+  .article-detail-title { font-size: 18px; }
+  .article-h2 { font-size: 17px; }
+  .article-swipe-hint { display: none; }
+}

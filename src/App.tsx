@@ -4,9 +4,10 @@ import { VocabPage } from './pages/VocabPage'
 import { PrivacyPage } from './pages/PrivacyPage'
 import { TermsPage } from './pages/TermsPage'
 import { ContactPage } from './pages/ContactPage'
+import { ArticlesPage } from './pages/ArticlesPage'
 import './App.css'
 
-type Page = 'home' | 'quiz' | 'vocab' | 'privacy' | 'terms' | 'contact'
+type Page = 'home' | 'quiz' | 'vocab' | 'articles' | 'privacy' | 'terms' | 'contact'
 
 export default function App() {
   const [page, setPage] = useState<Page>('home')
@@ -34,6 +35,9 @@ export default function App() {
             <button className={`nav-btn ${page === 'vocab' ? 'active' : ''}`} onClick={() => setPage('vocab')}>
               📖 単語集
             </button>
+            <button className={`nav-btn ${page === 'articles' ? 'active' : ''}`} onClick={() => setPage('articles')}>
+              📰 記事
+            </button>
           </nav>
         </div>
       </header>
@@ -46,6 +50,7 @@ export default function App() {
         {page === 'privacy' && <PrivacyPage onBack={goHome} />}
         {page === 'terms'   && <TermsPage onBack={goHome} />}
         {page === 'contact' && <ContactPage onBack={goHome} />}
+        {page === 'articles' && <ArticlesPage />}
       </main>
 
       {/* Footer */}
